@@ -5,6 +5,12 @@ import java.io.FileNotFoundException;
 public class Main {
     public static void main(String[] args) {
 
+        Poligon poligon2 = new Poligon("src//puncte2.txt");
+        System.out.println(poligon2);
+        System.out.println("Perimetrul: " + poligon2.perimetru());
+        System.out.println("Aria: " + poligon2.aria());
+
+
         try {
             File fisier = new File("src//puncte.txt");
             Scanner sc = new Scanner(fisier);
@@ -20,7 +26,7 @@ public class Main {
 
             Poligon poligon = new Poligon(puncte);
             System.out.println(poligon);
-            System.out.println("Perimetrul este:"+poligon.perimetru());
+            System.out.println("Perimetrul este:" + poligon.perimetru());
             sc.close();
         } catch (FileNotFoundException e) {
             System.out.println("Fisierul nu a fost gasit");
